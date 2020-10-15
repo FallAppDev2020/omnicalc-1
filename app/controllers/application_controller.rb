@@ -41,7 +41,6 @@ class ApplicationController < ActionController::Base
     p @mpri = (@apri/1200)
     p @numi = @mpri*@prin
     p @yr = -12*@yers
-    #(*@prin)/(1-(1+@apri/1200)**(-5*@yers))
     @pmnt = @numi / (1-(1+@apri/1200)**@yr)
     render ({ :template => "calculation_templates/calcpayment.html.erb"})
   end 
